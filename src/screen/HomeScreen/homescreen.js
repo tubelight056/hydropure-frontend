@@ -24,7 +24,7 @@ const Homescreen = () => {
   const calculator = async (data) => {
     // console.log(data);
     await axios
-      .post("http://localhost:5000/result", data)
+      .post("http://127.0.0.1:5000/result", data)
       .then(async (data) => {
         if (data.data.status === false) {
           // // console.log(data.data.statusMessage);

@@ -20,7 +20,7 @@ const Authentication = () => {
 
   const onLoginHandler = async (loginData) => {
     await axios
-      .post("http://localhost:5000/auth/login", {
+      .post("http://127.0.0.1:5000/auth/login", {
         email: loginData.email,
         password: loginData.password,
       })
@@ -41,7 +41,7 @@ const Authentication = () => {
   };
   const onRegisterHandler = async (Rdata) => {
     await axios
-      .post("http://localhost:5000/auth/register", {
+      .post("http://127.0.0.1:5000/auth/register", {
         email: Rdata.email.toLowerCase(),
         password: Rdata.password,
         name: Rdata.name,
@@ -60,7 +60,7 @@ const Authentication = () => {
           onErrorHandler(
             "Please verify your account , link has been sended to the mail"
           );
-          
+
           setTypeOfAuth("login");
           // window.location.reload();
         }

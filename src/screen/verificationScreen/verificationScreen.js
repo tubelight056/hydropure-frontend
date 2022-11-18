@@ -19,7 +19,7 @@ const VerificationScreen = (props) => {
   });
   const sendVerifiyableCode = async () => {
     await axios
-      .post("http://localhost:5000/auth/verify", {
+      .post("http://127.0.0.1:5000/auth/verify", {
         email: key["email"],
         hash: key["hash"],
       })
@@ -40,7 +40,8 @@ const VerificationScreen = (props) => {
   if (Status === "verified") {
     return (
       <div>
-        Account verified , Try <a href="http://localhost:3000/">login</a>
+        Account verified , Try{" "}
+        <a href="https://hydropure-frontend.vercel.app/">login</a>
       </div>
     );
   }
